@@ -108,7 +108,13 @@ export function Card({
             </span>
           </div>
           
-          <h2 className="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display absolute bottom-6 right-6 origin-bottom-right rotate-90 translate-x-full -translate-y-full" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}>
+          <h2 
+            className="absolute bottom-6 right-6 z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display whitespace-nowrap"
+            style={{ 
+              transform: 'rotate(-90deg) translateX(100%)', 
+              transformOrigin: 'bottom right' 
+            }}
+          >
             {card.title}
           </h2>
         </div>

@@ -108,7 +108,12 @@ export function Card({
             </div>
           </div>
           
-          <h2 className="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none origin-bottom-left transform -rotate-90 translate-y-6 md:translate-y-8 translate-x-3 md:translate-x-4 font-display">
+          <h2 className={cn(
+            "relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display",
+            index % 2 === 0 
+              ? "origin-bottom-left transform -rotate-90 translate-y-6 md:translate-y-8 translate-x-3 md:translate-x-4" 
+              : "origin-bottom-right transform rotate-90 self-end -translate-y-6 md:-translate-y-8 -translate-x-3 md:-translate-x-4"
+          )}>
             {card.title}
           </h2>
         </div>

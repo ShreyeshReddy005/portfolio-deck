@@ -21,7 +21,8 @@ const itemAnim = {
   }
 };
 
-export const CARDS_DATA = [
+// Internal card definitions (About Me first for readability)
+const _CARDS = [
   {
     id: 'about',
     title: 'ABOUT ME',
@@ -449,3 +450,7 @@ export const CARDS_DATA = [
     )
   }
 ];
+
+// Reversed so About Me (last item) has the highest z-index and sits on top of the deck.
+// Contact (first item) sits at the back.
+export const CARDS_DATA = [..._CARDS].reverse();

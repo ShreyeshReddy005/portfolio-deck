@@ -46,7 +46,7 @@ export function Card({
     maxWidth: isActive ? '1200px' : 'none',
     maxHeight: isActive ? '900px' : 'none',
     transform: isActive ? 'translate(-50%, -50%) rotate(0deg)' : getDeckTransform(),
-    zIndex: isActive ? 50 : (isAnotherActive ? 0 : 10 + index),
+    zIndex: isActive ? 50 : (isAnotherActive ? 0 : 14 - index),
     transition: `transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) ${!isLoaded ? index * 0.1 : 0}s, width 0.6s cubic-bezier(0.25, 1, 0.5, 1), height 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease`, 
     opacity: !isLoaded ? 0 : (isAnotherActive ? 0 : 1), 
     pointerEvents: isAnotherActive ? 'none' : 'auto',
@@ -108,12 +108,7 @@ export function Card({
             </div>
           </div>
           
-          <h2 className={cn(
-            "relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display",
-            index % 2 === 0 
-              ? "origin-bottom-left transform -rotate-90 translate-y-6 md:translate-y-8 translate-x-3 md:translate-x-4" 
-              : "origin-bottom-right transform rotate-90 self-end -translate-y-6 md:-translate-y-8 -translate-x-3 md:-translate-x-4"
-          )}>
+          <h2 className="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display origin-bottom-right transform rotate-90 self-end -translate-y-6 md:-translate-y-8 -translate-x-3 md:-translate-x-4">
             {card.title}
           </h2>
         </div>

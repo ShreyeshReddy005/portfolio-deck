@@ -100,15 +100,15 @@ export function Card({
           <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')]"></div>
 
           <div className="relative z-10 flex justify-between items-start">
-            <span className={cn("text-3xl md:text-4xl font-black opacity-50 font-display", card.textColor)}>
-              {card.number}
-            </span>
             <div className="w-8 h-8 rounded-full border-2 border-current opacity-30 flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-current"></div>
             </div>
+            <span className={cn("text-3xl md:text-4xl font-black opacity-50 font-display", card.textColor)}>
+              {card.number}
+            </span>
           </div>
           
-          <h2 className="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display origin-bottom-right transform rotate-90 self-end -translate-y-6 md:-translate-y-8 -translate-x-3 md:-translate-x-4">
+          <h2 className="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none font-display absolute bottom-6 right-6 origin-bottom-right rotate-90 translate-x-full -translate-y-full" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}>
             {card.title}
           </h2>
         </div>
